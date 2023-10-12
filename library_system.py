@@ -59,7 +59,7 @@ def admin_actions():
             elif 'return' in request.form:
                 if book_title in members[member_name]['borrowed_books']:
                     members[member_name]['borrowed_books'].remove(book_title)
-                    books[book_title] = '대출 가능'
+                    books[book_title] = '대출 가능 수정!'
 
     return render_template('admin.html', members=members, books=books)
 
